@@ -1,0 +1,42 @@
+<view class="container">
+  <view class="header-picker">
+    <view class="section__title">板卡</view>
+    <picker bindchange="bPickerChange" value="{{indexB}}" range="{{board}}">
+      <view class="picker">
+       {{board[indexB]}}
+      </view>
+    </picker>
+    <view class="section__title ">通道</view>
+    <picker bindchange="cPickerChange" value="{{indexC}}" range="{{channel[channelKey]}}">
+      <view class="picker end" wx:if="{{channel[channelKey][indexC]}}">
+       {{channel[channelKey][indexC]}}
+      </view>
+    </picker>
+  </view>
+  
+
+  <view class="header">
+    <image class="plus" src="/images/Search.png"/>
+    <input class="new-todo" value="{{ input }}" placeholder="请输入要查寻的关键字……" auto-focus bindinput="inputChangeHandle" bindchange="searchItem"/>
+  </view>
+  <block wx:if="{{ result.length }}">
+    <view class="todos">
+      <view wx:for="{{ result }}" wx:key="{{ index }}" > 
+        <view class="item {{index%2 ? 'odd' : 'even'}}">
+          <text class="key">{{ item.key }}</text>
+          <text class="name">{{ item.name }}</text>
+        </view>
+      </view>
+    </view>
+    <view class="footer">
+      <text wx:if="{{ itemCount }}">共找到{{ itemCount }}项结果</text>
+      <text class="btn" bindtap="clearCompletedHandle">清除已完成</text>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="empty">
+      <text class="title">欢迎使用板卡信息查询</text>
+      <text class="content">请输入要查询的内容</text>
+    </view>
+  </block>
+</view>

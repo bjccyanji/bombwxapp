@@ -1,0 +1,5 @@
+<view class="container empty title ">
+    {{num}}
+    <button>实时变化</button>
+    <button>停止</button>
+</view>

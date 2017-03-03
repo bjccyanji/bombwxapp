@@ -1,0 +1,62 @@
+{
+  "pages": [
+     "pages/search/search",
+    "pages/index/index",
+    "pages/account/account",
+    "pages/account/feedback/feedback",
+    "pages/interface/interface",
+    "pages/interface/code/code",
+    
+    "pages/sendSms/sendSms",
+    "pages/login/login",
+    "pages/getOpenId/getOpenId",
+    "pages/register/register",
+    "pages/picasa/picasa",
+   
+    "pages/zb25/zb25"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#3891f8",
+    "navigationBarTitleText": "增删改查-小程序Demo",
+    "navigationBarTextStyle": "#fff"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#318efb",
+    "borderStyle": "#3891f8",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index", 
+        "iconPath": "image/icon_API.png",
+        "selectedIconPath": "image/icon_API_HL.png",
+        "text": "常用接口"
+      },
+      {
+        "pagePath": "pages/interface/interface",
+        "iconPath": "image/icon_component.png",
+        "selectedIconPath": "image/icon_component_HL.png",
+        "text": "日记管理"
+      },
+      {
+        "pagePath": "pages/account/account",
+        "iconPath": "image/wechat.png",
+        "selectedIconPath": "image/wechatHL.png",
+        "text": "我"
+      },
+            {
+        "pagePath": "pages/search/search",
+        "iconPath": "image/wechat.png",
+        "selectedIconPath": "image/wechatHL.png",
+        "text": "ZB45"
+      },
+            {
+        "pagePath": "pages/zb25/zb25",
+        "iconPath": "image/wechat.png",
+        "selectedIconPath": "image/wechatHL.png",
+        "text": "ZB25"
+      }
+    ]
+  }
+}
